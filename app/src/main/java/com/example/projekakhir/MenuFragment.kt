@@ -27,6 +27,7 @@ class MenuFragment : Fragment() {
         binding.btnClose.setOnClickListener {
             findNavController().navigate(R.id.action_menuFragment_to_homeFragment)
         }
+
     }
 
 

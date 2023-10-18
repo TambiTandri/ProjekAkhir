@@ -294,6 +294,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -339,6 +340,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -384,6 +386,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -429,6 +432,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -474,6 +478,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -519,6 +524,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -564,6 +570,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -609,6 +616,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivCheck8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
