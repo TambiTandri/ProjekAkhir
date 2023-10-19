@@ -27,6 +27,16 @@ class MenuFragment : Fragment() {
         binding.btnClose.setOnClickListener {
             findNavController().navigate(R.id.action_menuFragment_to_homeFragment)
         }
+        binding.tvHome.setOnClickListener{
+            findNavController().navigate(R.id.action_menuFragment_to_homeFragment)
+        }
+        binding.tvLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_menuFragment_to_loginFragment)
+        }
+        binding.tvPersyaratan.setOnClickListener {
+            findNavController().navigate(R.id.action_menuFragment_to_persyaratanFragment)
+        }
+
 
     }
 
