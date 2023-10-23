@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.projekakhir.databinding.FragmentLoginBinding
 
@@ -22,6 +23,9 @@ class LoginFragment : Fragment() {
 
     private lateinit var binding : FragmentLoginBinding
 
+    var username:String = "yaman.nurtria"
+    var password:String = "12345678"
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,6 +40,18 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnHome.setOnClickListener{
             findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+        }
+
+        binding.btnLogin.setOnClickListener{
+            val usernameInput = binding.inputUsername.text.toString()
+            val passwordInput = binding.inputPassword.text.toString()
+            if (username == usernameInput && password == passwordInput ){
+                findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
+                Toast.makeText(context,"Login Berhasil",Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(context,"Login Gagal",Toast.LENGTH_SHORT).show()
+
+            }
         }
     }
 
