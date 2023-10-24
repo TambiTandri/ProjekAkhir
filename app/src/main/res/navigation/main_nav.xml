@@ -61,5 +61,25 @@
         <action
             android:id="@+id/action_dashboardFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_menuDashboardFragment"
+            app:destination="@id/menuDashboardFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/menuDashboardFragment"
+        android:name="com.example.projekakhir.MenuDashboardFragment"
+        android:label="fragment_menu_dashboard"
+        tools:layout="@layout/fragment_menu_dashboard" >
+        <action
+            android:id="@+id/action_menuDashboardFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_menuDashboardFragment_to_sklFragment"
+            app:destination="@id/sklFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sklFragment"
+        android:name="com.example.projekakhir.SklFragment"
+        android:label="fragment_skl"
+        tools:layout="@layout/fragment_skl" />
 </navigation>

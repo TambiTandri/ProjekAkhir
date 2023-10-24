@@ -27,6 +27,9 @@ class DashboardFragment : Fragment() {
         binding.logout.setOnClickListener{
             findNavController().navigate(R.id.action_dashboardFragment_to_homeFragment)
         }
+        binding.menu2.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_menuDashboardFragment)
+        }
 
 
     }

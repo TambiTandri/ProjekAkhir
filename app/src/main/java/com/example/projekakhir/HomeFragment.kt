@@ -100,7 +100,5 @@ class HomeFragment : Fragment() {
             else -> throw IllegalArgumentException("Invalid index")
         }
 
-
-
     }
 }
