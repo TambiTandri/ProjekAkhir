@@ -25,7 +25,7 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.logout.setOnClickListener{
-            findNavController().navigate(R.id.action_dashboardFragment_to_homeFragment)
+            findNavController().navigate(R.id.action_dashboardFragment_to_loginFragment)
         }
         binding.menu2.setOnClickListener {
             findNavController().navigate(R.id.action_dashboardFragment_to_menuDashboardFragment)

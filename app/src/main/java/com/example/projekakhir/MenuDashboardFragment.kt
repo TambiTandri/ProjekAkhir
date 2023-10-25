@@ -25,11 +25,20 @@ class MenuDashboardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnClose.setOnClickListener {
+        binding.tvDashboard.setOnClickListener {
+            findNavController().navigate(R.id.action_menuDashboardFragment_to_dashboardFragment)
+        }
+        binding.icDashboard.setOnClickListener {
             findNavController().navigate(R.id.action_menuDashboardFragment_to_dashboardFragment)
         }
         binding.tvSkl.setOnClickListener {
             findNavController().navigate(R.id.action_menuDashboardFragment_to_sklFragment)
+        }
+        binding.icSkl.setOnClickListener {
+            findNavController().navigate(R.id.action_menuDashboardFragment_to_sklFragment)
+        }
+        binding.btnClose.setOnClickListener {
+            findNavController().navigate(R.id.action_menuDashboardFragment_to_dashboardFragment)
         }
     }
 

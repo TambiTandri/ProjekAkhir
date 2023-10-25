@@ -59,11 +59,11 @@
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
-            android:id="@+id/action_dashboardFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
             android:id="@+id/action_dashboardFragment_to_menuDashboardFragment"
             app:destination="@id/menuDashboardFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuDashboardFragment"
@@ -81,5 +81,12 @@
         android:id="@+id/sklFragment"
         android:name="com.example.projekakhir.SklFragment"
         android:label="fragment_skl"
-        tools:layout="@layout/fragment_skl" />
+        tools:layout="@layout/fragment_skl" >
+        <action
+            android:id="@+id/action_sklFragment_to_menuDashboardFragment2"
+            app:destination="@id/menuDashboardFragment" />
+        <action
+            android:id="@+id/action_sklFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>
