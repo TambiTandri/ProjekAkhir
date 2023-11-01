@@ -94,7 +94,7 @@
                         android:id="@+id/tvsd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Selanat Datang"
+                        android:text="Selamat Datang"
                         android:textColor="@color/black"
                         android:textStyle="normal"
                         android:textSize="24sp"

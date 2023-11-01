@@ -76,6 +76,9 @@
         <action
             android:id="@+id/action_menuDashboardFragment_to_sklFragment"
             app:destination="@id/sklFragment" />
+        <action
+            android:id="@+id/action_menuDashboardFragment_to_pengambilanIjazahFragment"
+            app:destination="@id/pengambilanIjazahFragment" />
     </fragment>
     <fragment
         android:id="@+id/sklFragment"
@@ -87,6 +90,18 @@
             app:destination="@id/menuDashboardFragment" />
         <action
             android:id="@+id/action_sklFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pengambilanIjazahFragment"
+        android:name="com.example.projekakhir.PengambilanIjazahFragment"
+        android:label="fragment_pengambilan_ijazah"
+        tools:layout="@layout/fragment_pengambilan_ijazah" >
+        <action
+            android:id="@+id/action_pengambilanIjazahFragment_to_menuDashboardFragment"
+            app:destination="@id/menuDashboardFragment" />
+        <action
+            android:id="@+id/action_pengambilanIjazahFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

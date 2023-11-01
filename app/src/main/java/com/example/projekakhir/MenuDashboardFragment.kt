@@ -40,6 +40,9 @@ class MenuDashboardFragment : Fragment() {
         binding.btnClose.setOnClickListener {
             findNavController().navigate(R.id.action_menuDashboardFragment_to_dashboardFragment)
         }
+        binding.tvPengambilanIjasah.setOnClickListener{
+            findNavController().navigate(R.id.action_menuDashboardFragment_to_pengambilanIjazahFragment)
+        }
     }
 
 }
