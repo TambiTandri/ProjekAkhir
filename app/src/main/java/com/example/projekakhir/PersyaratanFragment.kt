@@ -30,8 +30,21 @@ class PersyaratanFragment : Fragment() {
         binding.tvHome.setOnClickListener {
             findNavController().navigate(R.id.action_persyaratanFragment_to_homeFragment)
         }
-        binding.menu.setOnClickListener{
-            findNavController().navigate(R.id.action_persyaratanFragment_to_homeFragment)
+        binding.menu.setOnClickListener {
+            binding.constraintMenu.visibility = View.VISIBLE
+            binding.menu.visibility = View.GONE
+            binding.btnClose.setOnClickListener {
+                findNavController().navigate(R.id.persyaratanFragment)
+            }
+            binding.constraintHome.setOnClickListener {
+                findNavController().navigate(R.id.homeFragment)
+            }
+            binding.constraintPersyaratan.setOnClickListener {
+                findNavController().navigate(R.id.persyaratanFragment)
+            }
+            binding.constraintLogin.setOnClickListener {
+                findNavController().navigate(R.id.loginFragment)
+            }
         }
 
         binding.cvFcIjazahSma.setOnClickListener { selectedIndex(0) }

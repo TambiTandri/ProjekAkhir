@@ -43,6 +43,9 @@ class MenuDashboardFragment : Fragment() {
         binding.tvPengambilanIjasah.setOnClickListener{
             findNavController().navigate(R.id.action_menuDashboardFragment_to_pengambilanIjazahFragment)
         }
+        binding.tvPendaftaran.setOnClickListener {
+            findNavController().navigate(R.id.action_menuDashboardFragment_to_biodataPendaftaranFragment )
+        }
     }
 
 }

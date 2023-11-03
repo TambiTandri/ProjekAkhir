@@ -35,7 +35,20 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.menu.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_menuFragment)
+            binding.constraintMenu.visibility = View.VISIBLE
+            binding.menu.visibility = View.GONE
+            binding.btnClose.setOnClickListener {
+                findNavController().navigate(R.id.homeFragment)
+            }
+            binding.constraintHome.setOnClickListener {
+                findNavController().navigate(R.id.homeFragment)
+            }
+            binding.constraintPersyaratan.setOnClickListener {
+                findNavController().navigate(R.id.persyaratanFragment)
+            }
+            binding.constraintLogin.setOnClickListener {
+                findNavController().navigate(R.id.loginFragment)
+            }
         }
         binding.btnDaftar.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_loginFragment)

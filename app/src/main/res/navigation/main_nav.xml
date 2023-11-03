@@ -79,6 +79,9 @@
         <action
             android:id="@+id/action_menuDashboardFragment_to_pengambilanIjazahFragment"
             app:destination="@id/pengambilanIjazahFragment" />
+        <action
+            android:id="@+id/action_menuDashboardFragment_to_biodataPendaftaranFragment"
+            app:destination="@id/biodataPendaftaranFragment" />
     </fragment>
     <fragment
         android:id="@+id/sklFragment"
@@ -102,6 +105,36 @@
             app:destination="@id/menuDashboardFragment" />
         <action
             android:id="@+id/action_pengambilanIjazahFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/biodataPendaftaranFragment"
+        android:name="com.example.projekakhir.BiodataPendaftaranFragment"
+        android:label="fragment_biodata_pendaftaran"
+        tools:layout="@layout/fragment_biodata_pendaftaran" >
+        <action
+            android:id="@+id/action_biodataPendaftaranFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_biodataPendaftaranFragment_to_menuDashboardFragment"
+            app:destination="@id/menuDashboardFragment" />
+        <action
+            android:id="@+id/action_biodataPendaftaranFragment_to_berkasPendaftaranFragment"
+            app:destination="@id/berkasPendaftaranFragment" />
+        <action
+            android:id="@+id/action_biodataPendaftaranFragment_to_berkasPendaftaranFragment2"
+            app:destination="@id/berkasPendaftaranFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/berkasPendaftaranFragment"
+        android:name="com.example.projekakhir.BerkasPendaftaranFragment"
+        android:label="fragment_berkas_pendaftaran"
+        tools:layout="@layout/fragment_berkas_pendaftaran" >
+        <action
+            android:id="@+id/action_berkasPendaftaranFragment_to_menuDashboardFragment"
+            app:destination="@id/menuDashboardFragment" />
+        <action
+            android:id="@+id/action_berkasPendaftaranFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 </navigation>
