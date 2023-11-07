@@ -340,29 +340,28 @@
                         app:layout_constraintTop_toBottomOf="@+id/tanggallahir"
                         tools:ignore="TextSizeCheck" />
 
-                    <RadioGroup
-                        android:id="@+id/radioGroupGender"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/jeniskelamin"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/tvjeniskelamin"
                         app:layout_constraintStart_toStartOf="parent"
-                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        android:padding="10dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                         >
-
-                        <RadioButton
-                            android:id="@+id/radioButtonMale"
-                            android:layout_width="wrap_content"
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/autoc_jenis_kelamin"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Laki-laki"
-                            android:layout_marginStart="10dp"/>
-
-                        <RadioButton
-                            android:id="@+id/radioButtonFemale"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Perempuan" />
-
-                    </RadioGroup>
+                            android:hint="@string/jenis_kelamin"
+                            android:inputType="none"/>
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvalamat"
@@ -374,7 +373,7 @@
                         android:textSize="20dp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/radioGroupGender"
+                        app:layout_constraintTop_toBottomOf="@+id/jeniskelamin"
                         tools:ignore="TextSizeCheck" />
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -526,12 +525,14 @@
                         app:boxCornerRadiusTopEnd="16dp"
                         app:boxCornerRadiusTopStart="16dp"
                         android:layout_marginTop="0dp"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:hint="Program Studi">
-                        <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        >
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
                             android:id="@+id/inputprodi"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pilih_program_studi"
+                            android:inputType="none"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textview.MaterialTextView
@@ -662,12 +663,14 @@
                         app:boxCornerRadiusTopEnd="16dp"
                         app:boxCornerRadiusTopStart="16dp"
                         android:layout_marginTop="0dp"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:hint="Pembimbing Ilmu">
-                        <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        >
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
                             android:id="@+id/inputpembimbingilmu"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pembimbing_ilmu"
+                            android:inputType="none"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textview.MaterialTextView
@@ -696,12 +699,14 @@
                         app:boxCornerRadiusTopEnd="16dp"
                         app:boxCornerRadiusTopStart="16dp"
                         android:layout_marginTop="0dp"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:hint="Pembimbing Agama">
-                        <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        >
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
                             android:id="@+id/inputpembimbingagama"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pembimbing_agama"
+                            android:inputType="none"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textview.MaterialTextView

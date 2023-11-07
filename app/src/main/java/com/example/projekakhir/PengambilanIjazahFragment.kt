@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.projekakhir.databinding.FragmentPengambilanIjazahBinding
 import java.util.Calendar
@@ -76,6 +79,35 @@ class PengambilanIjazahFragment : Fragment() {
             )
             datePickerDialog.show()
         }
+        binding.inputjeniskelamin.setOnClickListener {
+            pickGender()
+        }
 
+        binding.inputprodi.setOnClickListener {
+            pickProdi()
+        }
+
+    }
+
+    private fun pickProdi() {
+        val items = arrayOf("Teknik Informatika", "Perpustakaan dan Sains Infomasi (PdSI)")
+        val autoComplete = binding.inputprodi
+        val adapter = ArrayAdapter(requireActivity(),R.layout.list_drop_down,items)
+        autoComplete.setAdapter(adapter)
+        autoComplete.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
+            val itemSelected = adapterView.getItemAtPosition(i)
+            Toast.makeText(requireActivity(),"Program Studi : $itemSelected", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun pickGender() {
+        val items = arrayOf("Laki-Laki","Perempuan")
+        val autoComplete = binding.inputjeniskelamin
+        val adapter = ArrayAdapter(requireActivity(),R.layout.list_drop_down,items)
+        autoComplete.setAdapter(adapter)
+        autoComplete.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
+            val itemSelected = adapterView.getItemAtPosition(i)
+            Toast.makeText(requireActivity(),"Jenis Kelamin: $itemSelected", Toast.LENGTH_SHORT).show()
+        }
     }
 }

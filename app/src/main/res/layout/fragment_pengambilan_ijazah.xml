@@ -348,11 +348,13 @@
                         app:boxCornerRadiusTopEnd="16dp"
                         app:boxCornerRadiusTopStart="16dp"
                         android:layout_marginTop="0dp"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:hint="Jenis kelamin">
-                        <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        >
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
                             android:id="@+id/inputjeniskelamin"
                             android:layout_width="match_parent"
+                            android:inputType="none"
+                            android:hint="@string/jenis_kelamin"
                             android:layout_height="wrap_content"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -450,10 +452,12 @@
                         app:boxCornerRadiusTopEnd="16dp"
                         app:boxCornerRadiusTopStart="16dp"
                         android:layout_marginTop="0dp"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:hint="Teknologi Informasi">
-                        <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        >
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
                             android:id="@+id/inputprodi"
+                            android:inputType="none"
+                            android:hint="@string/pilih_program_studi"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
                     </com.google.android.material.textfield.TextInputLayout>
