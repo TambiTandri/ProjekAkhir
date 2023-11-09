@@ -65,9 +65,9 @@
                 android:id="@+id/tvdmpi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pendaftaran Wisuda"
+                android:text="@string/pendaftaran_wisuda"
                 android:textColor="@color/black"
-                android:textStyle="normal"
+                android:textStyle="normal|bold"
                 android:gravity="center"
                 android:textSize="26sp"
                 android:layout_marginTop="10dp"
@@ -90,6 +90,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvfi"
@@ -292,40 +301,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
                     </com.google.android.material.textfield.TextInputLayout>
-
-<!--                    <com.google.android.material.textview.MaterialTextView-->
-<!--                        android:id="@+id/tvjeniskelamin"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="20dp"-->
-<!--                        android:layout_marginTop="20dp"-->
-<!--                        android:text="Jenis Kelamin"-->
-<!--                        android:textSize="20dp"-->
-<!--                        android:textStyle="bold"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/tanggallahir"-->
-<!--                        tools:ignore="TextSizeCheck" />-->
-
-<!--                    <com.google.android.material.textfield.TextInputLayout-->
-<!--                        android:id="@+id/jeniskelamin"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        app:layout_constraintTop_toBottomOf="@id/tvjeniskelamin"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:boxCornerRadiusBottomEnd="16dp"-->
-<!--                        app:boxCornerRadiusBottomStart="16dp"-->
-<!--                        android:padding="10dp"-->
-<!--                        app:boxCornerRadiusTopEnd="16dp"-->
-<!--                        app:boxCornerRadiusTopStart="16dp"-->
-<!--                        android:layout_marginTop="0dp"-->
-<!--                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--                        android:hint="Jenis kelamin">-->
-<!--                        <com.google.android.material.textfield.TextInputEditText-->
-<!--                            android:id="@+id/inputjeniskelamin"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"/>-->
-<!--                    </com.google.android.material.textfield.TextInputLayout>-->
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvjeniskelamin"
@@ -665,12 +640,13 @@
                         android:layout_marginTop="0dp"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                         >
+
                         <com.google.android.material.textfield.MaterialAutoCompleteTextView
                             android:id="@+id/inputpembimbingilmu"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/pembimbing_ilmu"
-                            android:inputType="none"/>
+                            android:inputType="none" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textview.MaterialTextView
@@ -781,30 +757,334 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
                     </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:padding="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/constraint1"
+                            android:id="@+id/constraint2"
+                            >
+                            <TableLayout
+                                android:id="@+id/tableLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:stretchColumns="*"
+
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent">
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/outline"
+                                        android:text="Dokument"
+                                        android:gravity="center"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Aksi"
+                                        android:background="@drawable/outline"
+                                        android:gravity="center"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="FotoCopy Berwarna Ijazah SMA"
+                                        android:gravity="center"
+                                        android:background="@drawable/outline"
+                                        android:textSize="16sp"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Upload File"
+                                        android:background="@drawable/outline"
+                                        android:textColor="@color/gray"
+                                        android:gravity="center"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="FotoCopy Berwarna Akte Kelahiran"
+                                        android:gravity="center"
+                                        android:background="@drawable/outline"
+                                        android:textSize="16sp"/>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Upload File"
+                                            android:textColor="@color/gray"
+                                            android:gravity="center"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="FotoCopy Berwarna Kartu Keluarga"
+                                        android:gravity="center"
+                                        android:background="@drawable/outline"
+                                        android:textSize="16sp" />
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Upload File"
+                                            android:textColor="@color/gray"
+                                            android:gravity="center"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="FotoCopy Berwarna KTP yg berlaku (Diperbesar 4 kali)"
+                                        android:gravity="center"
+                                        android:background="@drawable/outline"
+                                        android:textSize="16sp" />
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Upload File"
+                                            android:textColor="@color/gray"
+                                            android:gravity="center"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="FotoCopy Berwarna KTM yg berlaku (Diperbesar 4 kali)"
+                                        android:gravity="center"
+                                        android:background="@drawable/outline"
+                                        android:textSize="16sp" />
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Upload File"
+                                            android:textColor="@color/gray"
+                                            android:gravity="center"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="Pas Foto Berwarna"
+                                        android:gravity="center"
+                                        android:background="@drawable/outline"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Upload File"
+                                        android:textColor="@color/gray"
+                                        android:gravity="center"
+                                        android:background="@drawable/outline"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="Surat Keterangan Kelulusan (SKL)"
+                                        android:gravity="center"
+                                        android:background="@drawable/outline"
+                                        android:textSize="16sp" />
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Upload File"
+                                            android:textColor="@color/gray"
+                                            android:gravity="center"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </TableRow>
+
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="Sertifikat TOEIC"
+                                        android:gravity="center"
+                                        android:background="@drawable/outline"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Upload File"
+                                        android:textColor="@color/gray"
+                                        android:gravity="center"
+                                        android:background="@drawable/outline"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+                            </TableLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnsimpan"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:text="Simpan"
+                        android:layout_marginTop="20dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginBottom="10dp"
                         android:backgroundTint="@color/biru"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tglwisuda"
+                        app:layout_constraintTop_toBottomOf="@id/constraint2"
                         app:layout_constraintStart_toStartOf="parent"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnSelanjutnya"
-                        android:layout_width="130dp"
-                        android:layout_height="wrap_content"
-                        android:text="Selanjutnya"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="20dp"
-                        android:backgroundTint="@color/hijau"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tglwisuda"
-                        app:layout_constraintStart_toEndOf="@id/btnsimpan"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 

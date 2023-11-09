@@ -97,9 +97,6 @@ class BiodataPendaftaranFragment : Fragment() {
 
         }
 
-        binding.btnSelanjutnya.setOnClickListener {
-            findNavController().navigate(R.id.action_biodataPendaftaranFragment_to_berkasPendaftaranFragment)
-        }
         binding.autocJenisKelamin.setOnClickListener {
             pickGender()
         }
