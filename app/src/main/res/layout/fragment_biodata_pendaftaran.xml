@@ -817,22 +817,50 @@
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="FotoCopy Berwarna Ijazah SMA"
+                                        android:text="FotoCopy Berwarna Ijazah\n SMA"
                                         android:gravity="center"
                                         android:background="@drawable/outline"
                                         android:textSize="16sp"
                                         />
 
-                                    <TextView
+                                    <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="1"
-                                        android:text="Upload File"
-                                        android:background="@drawable/outline"
-                                        android:textColor="@color/gray"
-                                        android:gravity="center"
-                                        android:textSize="16sp"
-                                        android:textStyle="bold" />
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <TextView
+                                            android:id="@+id/tvFcIjazah"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Upload File"
+                                            android:textColor="@color/gray"
+                                            android:gravity="center"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                        <Button
+                                            android:id="@+id/uploadButton1"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Upload"
+                                            android:layout_margin="5dp"
+                                            android:backgroundTint="@color/biru"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:textSize="10sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
 
 
@@ -856,6 +884,7 @@
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
                                         <TextView
+                                            android:id="@+id/tvFcAkte"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="Upload File"
@@ -867,6 +896,24 @@
                                             app:layout_constraintBottom_toBottomOf="parent"
                                             android:textSize="16sp"
                                             android:textStyle="bold" />
+                                        <Button
+                                            android:id="@+id/uploadButton2"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Upload"
+                                            android:layout_margin="5dp"
+                                            android:backgroundTint="@color/biru"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:textSize="10sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
 
                                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -894,6 +941,7 @@
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
                                         <TextView
+                                            android:id="@+id/tvFcKk"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="Upload File"
@@ -905,6 +953,24 @@
                                             app:layout_constraintBottom_toBottomOf="parent"
                                             android:textSize="16sp"
                                             android:textStyle="bold" />
+                                        <Button
+                                            android:id="@+id/uploadButton3"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Upload"
+                                            android:layout_margin="5dp"
+                                            android:backgroundTint="@color/biru"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:textSize="10sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
 
                                     </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
@@ -930,6 +996,7 @@
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
                                         <TextView
+                                            android:id="@+id/tvFcKtp"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="Upload File"
@@ -941,6 +1008,24 @@
                                             app:layout_constraintBottom_toBottomOf="parent"
                                             android:textSize="16sp"
                                             android:textStyle="bold" />
+                                        <Button
+                                            android:id="@+id/uploadButton4"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Upload"
+                                            android:layout_margin="5dp"
+                                            android:backgroundTint="@color/biru"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:textSize="10sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
 
                                     </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
@@ -966,6 +1051,7 @@
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
                                         <TextView
+                                            android:id="@+id/tvFcKtm"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="Upload File"
@@ -977,6 +1063,24 @@
                                             app:layout_constraintBottom_toBottomOf="parent"
                                             android:textSize="16sp"
                                             android:textStyle="bold" />
+                                        <Button
+                                            android:id="@+id/uploadButton5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Upload"
+                                            android:layout_margin="5dp"
+                                            android:backgroundTint="@color/biru"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:textSize="10sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
 
                                     </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
@@ -990,21 +1094,49 @@
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="Pas Foto Berwarna"
+                                        android:text="Pas Foto\n Berwarna"
                                         android:gravity="center"
                                         android:background="@drawable/outline"
                                         android:textSize="16sp" />
 
-                                    <TextView
+                                    <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="1"
-                                        android:text="Upload File"
-                                        android:textColor="@color/gray"
-                                        android:gravity="center"
-                                        android:background="@drawable/outline"
-                                        android:textSize="16sp"
-                                        android:textStyle="bold" />
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <TextView
+                                            android:id="@+id/tvPasFoto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Upload File"
+                                            android:textColor="@color/gray"
+                                            android:gravity="center"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                        <Button
+                                            android:id="@+id/uploadButton6"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Upload"
+                                            android:layout_margin="5dp"
+                                            android:backgroundTint="@color/biru"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:textSize="10sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
 
 
@@ -1028,6 +1160,7 @@
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
                                         <TextView
+                                            android:id="@+id/tvSkl"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="Upload File"
@@ -1039,6 +1172,24 @@
                                             app:layout_constraintBottom_toBottomOf="parent"
                                             android:textSize="16sp"
                                             android:textStyle="bold" />
+                                        <Button
+                                            android:id="@+id/uploadButton7"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Upload"
+                                            android:layout_margin="5dp"
+                                            android:backgroundTint="@color/biru"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:textSize="10sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
 
                                     </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
@@ -1053,21 +1204,49 @@
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="Sertifikat TOEIC"
+                                        android:text="Sertifikat\n TOEIC"
                                         android:gravity="center"
                                         android:background="@drawable/outline"
                                         android:textSize="16sp" />
 
-                                    <TextView
+                                    <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="1"
-                                        android:text="Upload File"
-                                        android:textColor="@color/gray"
-                                        android:gravity="center"
-                                        android:background="@drawable/outline"
-                                        android:textSize="16sp"
-                                        android:textStyle="bold" />
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <TextView
+                                            android:id="@+id/tvToec"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Upload File"
+                                            android:textColor="@color/gray"
+                                            android:gravity="center"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                        <Button
+                                            android:id="@+id/uploadButton8"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Upload"
+                                            android:layout_margin="5dp"
+                                            android:backgroundTint="@color/biru"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:textSize="10sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
 
                             </TableLayout>

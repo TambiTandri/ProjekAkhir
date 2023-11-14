@@ -1,6 +1,9 @@
 package com.example.projekakhir
 
+import android.app.Activity
 import android.app.DatePickerDialog
+import android.app.Instrumentation.ActivityResult
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,8 +12,10 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.fragment.findNavController
 import com.example.projekakhir.databinding.FragmentBiodataPendaftaranBinding
+import java.lang.Exception
 import java.util.Calendar
 
 class BiodataPendaftaranFragment : Fragment() {
@@ -105,6 +110,30 @@ class BiodataPendaftaranFragment : Fragment() {
         }
         binding.inputpembimbingagama.setOnClickListener {
             pickPembimbingAgama()
+        }
+        binding.uploadButton1.setOnClickListener { showFileIjazah()}
+    }
+
+    private fun showFileIjazah() {
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        intent.type = "*/*"
+        intent.addCategory(Intent.CATEGORY_OPENABLE)
+
+        try {
+            launcherIntent.launch(intent)
+//            startActivityForResult(Intent.createChooser(intent,"Select a File"),
+//                100)
+        }catch (exception:Exception){
+            Toast.makeText(requireActivity(),"Please install a file manager.",Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private val launcherIntent = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) {
+        if (it.resultCode == Activity.RESULT_OK){
+            binding.uploadButton1.visibility = View.GONE
+            binding.tvFcIjazah.text = it.data?.data.toString()
         }
     }
 
