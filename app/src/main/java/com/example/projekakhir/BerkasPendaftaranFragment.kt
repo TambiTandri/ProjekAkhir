@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.projekakhir.databinding.FragmentBerkasPendaftaranBinding
 
-class BerkasPendaftaranFragment : Fragment() {
+class  BerkasPendaftaranFragment : Fragment() {
 
     private lateinit var binding: FragmentBerkasPendaftaranBinding
     override fun onCreateView(
