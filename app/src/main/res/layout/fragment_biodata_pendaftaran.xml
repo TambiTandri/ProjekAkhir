@@ -828,6 +828,20 @@
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
 
+                                        <TextView
+                                            android:id="@+id/tvFcIjazah"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Upload File"
+                                            android:textColor="@color/gray"
+                                            android:gravity="center"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
                                         <Button
                                             android:id="@+id/uploadButton1"
                                             android:layout_width="0dp"
@@ -837,6 +851,7 @@
                                             android:textColor="@color/white"
                                             android:background="@drawable/button_background"
                                             android:gravity="center"
+                                            android:backgroundTint="@color/birumuda"
                                             android:textSize="10sp"
                                             app:layout_constraintTop_toTopOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"

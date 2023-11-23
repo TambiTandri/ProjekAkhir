@@ -265,6 +265,7 @@
                             />
 
                         <TextView
+                            android:id="@+id/fileArtikel"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
@@ -280,15 +281,15 @@
                             android:background="#000000"
                             />
 
-                        <TextView
+                        <Button
+                            android:id="@+id/buttonartikel"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:text="Upload File"
-                            android:textColor="@color/gray"
-                            android:gravity="center"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:text="Upload"
+                            android:backgroundTint="@color/birumuda"
+                            android:textSize="13sp"
+                            android:textStyle="normal|bold"/>
 
                         <View
                             android:layout_width="0dp"
@@ -336,8 +337,9 @@
                             android:layout_weight="2"
                             android:text="Lembar Pengesahan"
                             android:gravity="center"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            />
 
                         <View
                             android:layout_width="0dp"
@@ -347,6 +349,7 @@
                             />
 
                         <TextView
+                            android:id="@+id/filelp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
@@ -362,14 +365,15 @@
                             android:background="#000000"
                             />
 
-                        <TextView
+                        <Button
+                            android:id="@+id/btnlp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:text="Upload File"
+                            android:text="Upload"
                             android:gravity="center"
-                            android:textColor="@color/gray"
-                            android:textSize="16sp"
+                            android:backgroundTint="@color/birumuda"
+                            android:textSize="13sp"
                             android:textStyle="bold" />
 
                         <View
@@ -419,7 +423,7 @@
                             android:layout_weight="2"
                             android:text="Sertifikat Kompetensi"
                             android:gravity="center"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <View
@@ -430,6 +434,7 @@
                             />
 
                         <TextView
+                            android:id="@+id/filesk"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
@@ -445,15 +450,16 @@
                             android:background="#000000"
                             />
 
-                        <TextView
+                        <Button
+                            android:id="@+id/btnsk"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:text="Upload File"
-                            android:textColor="@color/gray"
+                            android:text="Upload"
+                            android:backgroundTint="@color/birumuda"
                             android:gravity="center"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textSize="15sp"
+                            android:textStyle="normal|bold" />
 
                         <View
                             android:layout_width="0dp"
