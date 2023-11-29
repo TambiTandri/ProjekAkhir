@@ -812,47 +812,65 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
-                                    <TextView
+                                    <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="FotoCopy Berwarna Ijazah\n SMA"
-                                        android:gravity="center"
-                                        android:background="@drawable/outline"
-                                        android:textSize="16sp"
-                                        />
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcIjazah"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcIjazah"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="FotoCopy Berwarna Ijazah\n SMA"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
                                     <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
-
-                                        <TextView
-                                            android:id="@+id/tvFcIjazah"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Upload File"
-                                            android:textColor="@color/gray"
-                                            android:gravity="center"
-                                            app:layout_constraintTop_toTopOf="parent"
-                                            app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintBottom_toBottomOf="parent"
-                                            android:textSize="16sp"
-                                            android:textStyle="bold" />
 
                                         <Button
                                             android:id="@+id/uploadButton1"
-                                            android:layout_width="0dp"
+                                            android:layout_width="match_parent"
                                             android:layout_height="0dp"
                                             android:text="Upload"
                                             android:layout_margin="4dp"
                                             android:textColor="@color/white"
-                                            android:background="@drawable/button_background"
                                             android:gravity="center"
-                                            android:backgroundTint="@color/birumuda"
+                                            android:background="@drawable/button_background"
                                             android:textSize="10sp"
+                                            android:visibility="visible"
                                             app:layout_constraintTop_toTopOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"
                                             app:layout_constraintStart_toStartOf="parent"
@@ -860,6 +878,37 @@
                                             android:textStyle="normal|bold"
                                             android:layout_marginStart="2dp"
                                             />
+                                        <Button
+                                            android:id="@+id/deleteButton1"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile1"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                                     </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
@@ -870,43 +919,64 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
-                                    <TextView
+                                    <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="FotoCopy Berwarna Akte Kelahiran"
-                                        android:gravity="center"
-                                        android:background="@drawable/outline"
-                                        android:textSize="16sp"/>
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcAkte"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcAkte"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="FotoCopy Berwarna Akta\n Kelahiran"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                                     <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
-                                        <TextView
-                                            android:id="@+id/tvFcAkte"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Upload File"
-                                            android:textColor="@color/gray"
-                                            android:gravity="center"
-                                            app:layout_constraintTop_toTopOf="parent"
-                                            app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintBottom_toBottomOf="parent"
-                                            android:textSize="16sp"
-                                            android:textStyle="bold" />
+
                                         <Button
                                             android:id="@+id/uploadButton2"
-                                            android:layout_width="0dp"
+                                            android:layout_width="match_parent"
                                             android:layout_height="0dp"
                                             android:text="Upload"
                                             android:layout_margin="4dp"
-                                            android:background="@drawable/button_background"
                                             android:textColor="@color/white"
                                             android:gravity="center"
+                                            android:background="@drawable/button_background"
                                             android:textSize="10sp"
+                                            android:visibility="visible"
                                             app:layout_constraintTop_toTopOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"
                                             app:layout_constraintStart_toStartOf="parent"
@@ -914,55 +984,102 @@
                                             android:textStyle="normal|bold"
                                             android:layout_marginStart="2dp"
                                             />
+                                        <Button
+                                            android:id="@+id/deleteButton2"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile2"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                                     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
                                 </TableRow>
-
-
 
                                 <TableRow
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
-                                    <TextView
+                                    <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="FotoCopy Berwarna Kartu Keluarga"
-                                        android:gravity="center"
-                                        android:background="@drawable/outline"
-                                        android:textSize="16sp" />
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcKK"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcKK"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="FotoCopy Berwarna Kartu\n Keluarga"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                                     <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
-                                        <TextView
-                                            android:id="@+id/tvFcKk"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Upload File"
-                                            android:textColor="@color/gray"
-                                            android:gravity="center"
-                                            app:layout_constraintTop_toTopOf="parent"
-                                            app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintBottom_toBottomOf="parent"
-                                            android:textSize="16sp"
-                                            android:textStyle="bold" />
+
                                         <Button
                                             android:id="@+id/uploadButton3"
-                                            android:layout_width="0dp"
+                                            android:layout_width="match_parent"
                                             android:layout_height="0dp"
                                             android:text="Upload"
                                             android:layout_margin="4dp"
-                                            android:background="@drawable/button_background"
                                             android:textColor="@color/white"
                                             android:gravity="center"
+                                            android:background="@drawable/button_background"
                                             android:textSize="10sp"
+                                            android:visibility="visible"
                                             app:layout_constraintTop_toTopOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"
                                             app:layout_constraintStart_toStartOf="parent"
@@ -970,8 +1087,40 @@
                                             android:textStyle="normal|bold"
                                             android:layout_marginStart="2dp"
                                             />
+                                        <Button
+                                            android:id="@+id/deleteButton3"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile3"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                                 </TableRow>
 
 
@@ -980,43 +1129,63 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
-                                    <TextView
+                                   <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="FotoCopy Berwarna KTP yg berlaku (Diperbesar 4 kali)"
-                                        android:gravity="center"
-                                        android:background="@drawable/outline"
-                                        android:textSize="16sp" />
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcKTP"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcKTP"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Fotocopy Berwarna KTP\n berlaku(diperbesar 4 kali)"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                                     <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
-                                        <TextView
-                                            android:id="@+id/tvFcKtp"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Upload File"
-                                            android:textColor="@color/gray"
-                                            android:gravity="center"
-                                            app:layout_constraintTop_toTopOf="parent"
-                                            app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintBottom_toBottomOf="parent"
-                                            android:textSize="16sp"
-                                            android:textStyle="bold" />
+
                                         <Button
                                             android:id="@+id/uploadButton4"
-                                            android:layout_width="0dp"
+                                            android:layout_width="match_parent"
                                             android:layout_height="0dp"
                                             android:text="Upload"
-                                            android:layout_margin="5dp"
-                                            android:background="@drawable/button_background"
+                                            android:layout_margin="4dp"
                                             android:textColor="@color/white"
                                             android:gravity="center"
+                                            android:background="@drawable/button_background"
                                             android:textSize="10sp"
+                                            android:visibility="visible"
                                             app:layout_constraintTop_toTopOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"
                                             app:layout_constraintStart_toStartOf="parent"
@@ -1024,53 +1193,102 @@
                                             android:textStyle="normal|bold"
                                             android:layout_marginStart="2dp"
                                             />
-
+                                        <Button
+                                            android:id="@+id/deleteButton4"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile4"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
                                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                                 </TableRow>
-
-
 
                                 <TableRow
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
-                                    <TextView
+                                    <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="FotoCopy Berwarna KTM yg berlaku (Diperbesar 4 kali)"
-                                        android:gravity="center"
-                                        android:background="@drawable/outline"
-                                        android:textSize="16sp" />
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcKTM"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcKTM"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="FotoCopy Berwarna KTM\n berlaku(diperbesar 4 kali)"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                                     <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
-                                        <TextView
-                                            android:id="@+id/tvFcKtm"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Upload File"
-                                            android:textColor="@color/gray"
-                                            android:gravity="center"
-                                            app:layout_constraintTop_toTopOf="parent"
-                                            app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintBottom_toBottomOf="parent"
-                                            android:textSize="16sp"
-                                            android:textStyle="bold" />
+
                                         <Button
                                             android:id="@+id/uploadButton5"
-                                            android:layout_width="0dp"
+                                            android:layout_width="match_parent"
                                             android:layout_height="0dp"
                                             android:text="Upload"
                                             android:layout_margin="4dp"
-                                            android:background="@drawable/button_background"
                                             android:textColor="@color/white"
                                             android:gravity="center"
+                                            android:background="@drawable/button_background"
                                             android:textSize="10sp"
+                                            android:visibility="visible"
                                             app:layout_constraintTop_toTopOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"
                                             app:layout_constraintStart_toStartOf="parent"
@@ -1078,7 +1296,37 @@
                                             android:textStyle="normal|bold"
                                             android:layout_marginStart="2dp"
                                             />
-
+                                        <Button
+                                            android:id="@+id/deleteButton5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile5"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
                                     </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
 
@@ -1087,43 +1335,63 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
-                                    <TextView
+                                    <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="Pas Foto\n Berwarna"
-                                        android:gravity="center"
-                                        android:background="@drawable/outline"
-                                        android:textSize="16sp" />
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcPasFoto"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcPasFoto"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Pas Foto\n Berwarna"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                                     <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
-                                        <TextView
-                                            android:id="@+id/tvPasFoto"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Upload File"
-                                            android:textColor="@color/gray"
-                                            android:gravity="center"
-                                            app:layout_constraintTop_toTopOf="parent"
-                                            app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintBottom_toBottomOf="parent"
-                                            android:textSize="16sp"
-                                            android:textStyle="bold" />
+
                                         <Button
                                             android:id="@+id/uploadButton6"
-                                            android:layout_width="0dp"
+                                            android:layout_width="match_parent"
                                             android:layout_height="0dp"
                                             android:text="Upload"
                                             android:layout_margin="4dp"
-                                            android:background="@drawable/button_background"
                                             android:textColor="@color/white"
                                             android:gravity="center"
+                                            android:background="@drawable/button_background"
                                             android:textSize="10sp"
+                                            android:visibility="visible"
                                             app:layout_constraintTop_toTopOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"
                                             app:layout_constraintStart_toStartOf="parent"
@@ -1131,7 +1399,37 @@
                                             android:textStyle="normal|bold"
                                             android:layout_marginStart="2dp"
                                             />
-
+                                        <Button
+                                            android:id="@+id/deleteButton6"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile6"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
                                     </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
 
@@ -1141,43 +1439,63 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
-                                    <TextView
+                                    <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="Surat Keterangan Kelulusan (SKL)"
-                                        android:gravity="center"
-                                        android:background="@drawable/outline"
-                                        android:textSize="16sp" />
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcSKL"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcSKL"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Surat Keterangan Kelulusan(SKL)"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                                     <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
-                                        <TextView
-                                            android:id="@+id/tvSkl"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Upload File"
-                                            android:textColor="@color/gray"
-                                            android:gravity="center"
-                                            app:layout_constraintTop_toTopOf="parent"
-                                            app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintBottom_toBottomOf="parent"
-                                            android:textSize="16sp"
-                                            android:textStyle="bold" />
+
                                         <Button
                                             android:id="@+id/uploadButton7"
-                                            android:layout_width="0dp"
+                                            android:layout_width="match_parent"
                                             android:layout_height="0dp"
                                             android:text="Upload"
                                             android:layout_margin="4dp"
-                                            android:background="@drawable/button_background"
                                             android:textColor="@color/white"
                                             android:gravity="center"
+                                            android:background="@drawable/button_background"
                                             android:textSize="10sp"
+                                            android:visibility="visible"
                                             app:layout_constraintTop_toTopOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"
                                             app:layout_constraintStart_toStartOf="parent"
@@ -1185,7 +1503,37 @@
                                             android:textStyle="normal|bold"
                                             android:layout_marginStart="2dp"
                                             />
-
+                                        <Button
+                                            android:id="@+id/deleteButton7"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile7"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
                                     </androidx.constraintlayout.widget.ConstraintLayout>
                                 </TableRow>
 
@@ -1195,43 +1543,71 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
-                                    <TextView
+<!--                                    <TextView-->
+<!--                                        android:layout_width="0dp"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_weight="2"-->
+<!--                                        android:text="Sertifikat\n TOEIC"-->
+<!--                                        android:gravity="center"-->
+<!--                                        android:background="@drawable/outline"-->
+<!--                                        android:textSize="16sp" />-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
                                         android:layout_weight="2"
-                                        android:text="Sertifikat\n TOEIC"
-                                        android:gravity="center"
-                                        android:background="@drawable/outline"
-                                        android:textSize="16sp" />
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/outline">
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCloseFcTOEIC"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:visibility="visible"
+                                            android:layout_marginStart="5dp"
+                                            android:src="@drawable/baseline_close_red_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+                                        <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/ivCheckFcTOEIC"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="5dp"
+                                            android:visibility="gone"
+                                            android:src="@drawable/baseline_check_24"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Sertifikat\n TOEIC"
+                                            android:gravity="center"
+                                            android:background="@drawable/outline"
+                                            android:textSize="16sp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                                     <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:background="@drawable/outline">
-                                        <TextView
-                                            android:id="@+id/tvToec"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Upload File"
-                                            android:textColor="@color/gray"
-                                            android:gravity="center"
-                                            app:layout_constraintTop_toTopOf="parent"
-                                            app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintBottom_toBottomOf="parent"
-                                            android:textSize="16sp"
-                                            android:textStyle="bold" />
+
                                         <Button
                                             android:id="@+id/uploadButton8"
-                                            android:layout_width="0dp"
+                                            android:layout_width="match_parent"
                                             android:layout_height="0dp"
                                             android:text="Upload"
                                             android:layout_margin="4dp"
-                                            android:background="@drawable/button_background"
                                             android:textColor="@color/white"
                                             android:gravity="center"
+                                            android:background="@drawable/button_background"
                                             android:textSize="10sp"
+                                            android:visibility="visible"
                                             app:layout_constraintTop_toTopOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"
                                             app:layout_constraintStart_toStartOf="parent"
@@ -1239,8 +1615,39 @@
                                             android:textStyle="normal|bold"
                                             android:layout_marginStart="2dp"
                                             />
-
+                                        <Button
+                                            android:id="@+id/deleteButton8"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:text="Delete"
+                                            android:layout_margin="4dp"
+                                            android:textColor="@color/white"
+                                            android:gravity="center"
+                                            android:backgroundTint="@color/red"
+                                            android:textSize="10sp"
+                                            android:visibility="gone"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:textStyle="normal|bold"
+                                            android:layout_marginStart="2dp"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tvUploadFile8"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:text=""
+                                            android:gravity="center"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
                                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                                 </TableRow>
 
                             </TableLayout>

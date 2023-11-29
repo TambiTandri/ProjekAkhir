@@ -134,6 +134,55 @@ class BiodataPendaftaranFragment : Fragment() {
         binding.uploadButton8.setOnClickListener {
             showFileSt()
         }
+
+        binding.deleteButton1.setOnClickListener {
+            binding.uploadButton1.visibility = View.VISIBLE
+            binding.deleteButton1.visibility = View.GONE
+            binding.ivCloseFcIjazah.visibility = View.VISIBLE
+            binding.ivCheckFcIjazah.visibility = View.GONE
+        }
+        binding.deleteButton2.setOnClickListener {
+            binding.uploadButton2.visibility = View.VISIBLE
+            binding.deleteButton2.visibility = View.GONE
+            binding.ivCloseFcAkte.visibility = View.VISIBLE
+            binding.ivCheckFcAkte.visibility = View.GONE
+        }
+        binding.deleteButton3.setOnClickListener {
+            binding.uploadButton3.visibility = View.VISIBLE
+            binding.deleteButton3.visibility = View.GONE
+            binding.ivCloseFcKK.visibility = View.VISIBLE
+            binding.ivCheckFcKK.visibility = View.GONE
+        }
+        binding.deleteButton4.setOnClickListener {
+            binding.uploadButton4.visibility = View.VISIBLE
+            binding.deleteButton4.visibility = View.GONE
+            binding.ivCloseFcKTP.visibility = View.VISIBLE
+            binding.ivCheckFcKTP.visibility = View.GONE
+        }
+        binding.deleteButton5.setOnClickListener {
+            binding.uploadButton5.visibility = View.VISIBLE
+            binding.deleteButton5.visibility = View.GONE
+            binding.ivCloseFcKTM.visibility = View.VISIBLE
+            binding.ivCheckFcKTM.visibility = View.GONE
+        }
+        binding.deleteButton6.setOnClickListener {
+            binding.uploadButton6.visibility = View.VISIBLE
+            binding.deleteButton6.visibility = View.GONE
+            binding.ivCloseFcPasFoto.visibility = View.VISIBLE
+            binding.ivCheckFcPasFoto.visibility = View.GONE
+        }
+        binding.deleteButton7.setOnClickListener {
+            binding.uploadButton7.visibility = View.VISIBLE
+            binding.deleteButton7.visibility = View.GONE
+            binding.ivCloseFcSKL.visibility = View.VISIBLE
+            binding.ivCheckFcSKL.visibility = View.GONE
+        }
+        binding.deleteButton8.setOnClickListener {
+            binding.uploadButton8.visibility = View.VISIBLE
+            binding.deleteButton8.visibility = View.GONE
+            binding.ivCloseFcTOEIC.visibility = View.VISIBLE
+            binding.ivCheckFcTOEIC.visibility = View.GONE
+        }
     }
 
     private fun showFileSt() {
@@ -154,6 +203,10 @@ class BiodataPendaftaranFragment : Fragment() {
         ActivityResultContracts.StartActivityForResult()
     ) {
         if (it.resultCode == Activity.RESULT_OK){
+            binding.uploadButton8.visibility = View.GONE
+            binding.deleteButton8.visibility = View.VISIBLE
+            binding.ivCloseFcTOEIC.visibility = View.GONE
+            binding.ivCheckFcTOEIC.visibility = View.VISIBLE
         }
     }
 
@@ -176,7 +229,9 @@ class BiodataPendaftaranFragment : Fragment() {
     ) {
         if (it.resultCode == Activity.RESULT_OK){
             binding.uploadButton7.visibility = View.GONE
-            binding.tvSkl.text = it.data?.data.toString()
+            binding.deleteButton7.visibility = View.VISIBLE
+            binding.ivCloseFcSKL.visibility = View.GONE
+            binding.ivCheckFcSKL.visibility = View.VISIBLE
         }
     }
 
@@ -199,7 +254,9 @@ class BiodataPendaftaranFragment : Fragment() {
     ) {
         if (it.resultCode == Activity.RESULT_OK){
             binding.uploadButton6.visibility = View.GONE
-            binding.tvPasFoto.text = it.data?.data.toString()
+            binding.deleteButton6.visibility = View.VISIBLE
+            binding.ivCloseFcPasFoto.visibility = View.GONE
+            binding.ivCheckFcPasFoto.visibility = View.VISIBLE
         }
     }
 
@@ -222,7 +279,9 @@ class BiodataPendaftaranFragment : Fragment() {
     ) {
         if (it.resultCode == Activity.RESULT_OK){
             binding.uploadButton5.visibility = View.GONE
-            binding.tvFcKtm.text = it.data?.data.toString()
+            binding.deleteButton5.visibility = View.VISIBLE
+            binding.ivCloseFcKTM.visibility = View.GONE
+            binding.ivCheckFcKTM.visibility = View.VISIBLE
         }
     }
 
@@ -245,7 +304,10 @@ class BiodataPendaftaranFragment : Fragment() {
     ) {
         if (it.resultCode == Activity.RESULT_OK){
             binding.uploadButton4.visibility = View.GONE
-            binding.tvFcKtp.text = it.data?.data.toString()
+            binding.deleteButton4.visibility = View.VISIBLE
+            binding.ivCloseFcKTP.visibility = View.GONE
+            binding.ivCheckFcKTP.visibility = View.VISIBLE
+
         }
     }
 
@@ -268,7 +330,9 @@ class BiodataPendaftaranFragment : Fragment() {
     ) {
         if (it.resultCode == Activity.RESULT_OK){
             binding.uploadButton3.visibility = View.GONE
-            binding.tvFcKk.text = it.data?.data.toString()
+            binding.deleteButton3.visibility = View.VISIBLE
+            binding.ivCloseFcKK.visibility = View.GONE
+            binding.ivCheckFcKK.visibility = View.VISIBLE
         }
     }
 
@@ -291,7 +355,9 @@ class BiodataPendaftaranFragment : Fragment() {
     ) {
         if (it.resultCode == Activity.RESULT_OK){
             binding.uploadButton2.visibility = View.GONE
-            binding.tvFcAkte.text = it.data?.data.toString()
+            binding.deleteButton2.visibility = View.VISIBLE
+            binding.ivCloseFcAkte.visibility = View.GONE
+            binding.ivCheckFcAkte.visibility = View.VISIBLE
         }
     }
 
@@ -314,7 +380,10 @@ class BiodataPendaftaranFragment : Fragment() {
     ) {
         if (it.resultCode == Activity.RESULT_OK){
             binding.uploadButton1.visibility = View.GONE
-            binding.tvFcIjazah.text = it.data?.data.toString()
+            binding.deleteButton1.visibility = View.VISIBLE
+            binding.ivCloseFcIjazah.visibility = View.GONE
+            binding.ivCheckFcIjazah.visibility = View.VISIBLE
+        //          binding.fileArtikel.text = it.data?.data.toString()
         }
     }
 
