@@ -73,12 +73,25 @@ class SklFragment : Fragment() {
     private fun getFileName(uri: android.net.Uri): String {
         var result: String? = null
         if (uri.scheme == "content") {
+//            val cursor = requireContext().contentResolver.query(uri, null, null, null, null)
+//            cursor?.use {
+//                if (it.moveToFirst()) {
+//                    result = it.getString(it.getColumnIndex(OpenableColumns.DISPLAY_NAME))
+//                }
+//            }
             val cursor = requireContext().contentResolver.query(uri, null, null, null, null)
+
             cursor?.use {
                 if (it.moveToFirst()) {
-                    result = it.getString(it.getColumnIndex(OpenableColumns.DISPLAY_NAME))
+                    val displayNameIndex = it.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+                    result = if (displayNameIndex != -1) {
+                        it.getString(displayNameIndex)
+                    } else {
+                        "unknown"
+                    }
                 }
-            }
+            } ?: return "unknown"
+
         }
         if (result == null) {
             result = uri.path
@@ -90,7 +103,7 @@ class SklFragment : Fragment() {
         return result ?: "unknown"
     }
 
-    private fun pickFileArtikel() {
+    private fun pickFileArtikel(uri: android.net.Uri) {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.type = "*/*"
         intent.addCategory(Intent.CATEGORY_OPENABLE)
