@@ -2,7 +2,11 @@ package com.example.projekakhir
 
 import android.app.Activity
 import android.app.DatePickerDialog
+import android.net.Uri
 import android.app.Instrumentation.ActivityResult
+import androidx.core.content.ContextCompat
+import android.content.pm.PackageManager
+import android.provider.MediaStore
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -19,8 +23,9 @@ import java.lang.Exception
 import java.util.Calendar
 
 class BiodataPendaftaranFragment : Fragment() {
-
+    private val REQUEST_IMAGE_PICK = 1001
     private lateinit var binding: FragmentBiodataPendaftaranBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -182,6 +187,32 @@ class BiodataPendaftaranFragment : Fragment() {
             binding.deleteButton8.visibility = View.GONE
             binding.ivCloseFcTOEIC.visibility = View.VISIBLE
             binding.ivCheckFcTOEIC.visibility = View.GONE
+        }
+
+        eventGallery()
+
+
+    }
+    //open galeri
+    private fun eventGallery(){
+        binding.shfotoprofil.setOnClickListener {
+            openGallery()
+        }
+    }
+
+    private fun openGallery() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        startActivityForResult(intent, REQUEST_IMAGE_PICK)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQUEST_IMAGE_PICK && resultCode == Activity.RESULT_OK && data != null) {
+            val selectedImageUri = data.data
+            selectedImageUri?.let {
+                binding.shfotoprofil.setImageURI(it)
+            }
         }
     }
 
