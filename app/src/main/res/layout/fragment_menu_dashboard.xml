@@ -55,43 +55,26 @@
         android:layout_margin="20dp"
         app:layout_constraintTop_toBottomOf="@id/horizontalLine"
         app:layout_constraintStart_toStartOf="parent"/>
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvDashboard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dashboard"
-        android:textStyle="normal"
-        android:textSize="20sp"
+        android:layout_width="94dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintTop_toTopOf="@id/horizontalLine"
-        app:layout_constraintStart_toEndOf="@id/icDashboard"/>
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/icPendaftaran"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="20dp"
-        android:src="@drawable/ic_pendaftaran"
-        app:layout_constraintTop_toBottomOf="@id/icDashboard"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tvPendaftaran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pendaftaran"
-        android:textStyle="normal"
+        android:text="Dashboard"
         android:textSize="20sp"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@id/tvDashboard"
-        app:layout_constraintStart_toEndOf="@id/icPendaftaran"/>
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@id/icDashboard"
+        app:layout_constraintTop_toTopOf="@id/horizontalLine" />
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/icSkl"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="20dp"
         android:src="@drawable/ic_skl"
-        app:layout_constraintTop_toBottomOf="@id/icPendaftaran"
+        app:layout_constraintTop_toBottomOf="@id/icDashboard"
         app:layout_constraintStart_toStartOf="parent"/>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvSkl"
@@ -100,17 +83,38 @@
         android:text="SKL"
         android:textStyle="normal"
         android:textSize="20sp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@id/tvPendaftaran"
+        app:layout_constraintTop_toBottomOf="@id/tvDashboard"
         app:layout_constraintStart_toEndOf="@id/icSkl"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icPendaftaran"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_pendaftaran"
+        app:layout_constraintTop_toBottomOf="@id/icSkl"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPendaftaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pendaftaran"
+        android:textStyle="normal"
+        android:textSize="20sp"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSkl"
+        app:layout_constraintStart_toEndOf="@id/icPendaftaran"/>
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/icPengambilanIjasah"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="20dp"
         android:src="@drawable/ic_pengambilan_ijasah"
-        app:layout_constraintTop_toBottomOf="@id/icSkl"
+        app:layout_constraintTop_toBottomOf="@id/icPendaftaran"
         app:layout_constraintStart_toStartOf="parent"/>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvPengambilanIjasah"
@@ -119,9 +123,9 @@
         android:text="Pengambilan Ijasah"
         android:textStyle="normal"
         android:textSize="20sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@id/tvSkl"
+        app:layout_constraintTop_toBottomOf="@id/tvPendaftaran"
         app:layout_constraintStart_toEndOf="@id/icPengambilanIjasah"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
